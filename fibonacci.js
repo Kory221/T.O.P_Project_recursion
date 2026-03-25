@@ -10,3 +10,15 @@ const fibs = (n) => {
 
     return result;
 };
+
+
+const fibsRec = (n) => {
+    if (n === 0) return [];
+    if (n === 1) return [0];
+    if (n === 2) return [0, 1];
+
+    const prev = fibsRec(n-1); 
+    const sum = prev.at(-1) + prev.at(-2);
+
+    return [...prev, sum];
+};
