@@ -23,11 +23,12 @@ export const mergeSort = (arr) => {
     };
 
     if (i >= left.length) {
-        result.push(...right.filter((element) => !result.includes(element)));
+        result.push(...right.slice(j));
     }
     else if (j>= right.length) {
-        result.push(...left.filter((element) => !result.includes(element)));
+        result.push(...right.slice(j));
     };
     
     return result;
 };
+
