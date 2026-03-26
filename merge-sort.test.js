@@ -7,3 +7,7 @@ test ('empty array', () => {
 test ('single element', () => {
     expect(mergeSort([73])).toEqual([73]);
 });
+
+test('already sorted', () => {
+    expect(mergeSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+});
