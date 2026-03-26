@@ -26,7 +26,7 @@ export const mergeSort = (arr) => {
         result.push(...right.slice(j));
     }
     else if (j>= right.length) {
-        result.push(...right.slice(j));
+        result.push(...left.slice(i));
     };
     
     return result;
